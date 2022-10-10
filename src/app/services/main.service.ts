@@ -15,9 +15,11 @@ export class MainService {
 
   public fetchTerrains() {
     this.terrains = [
-      new Terrain("1", "terrain-1", 10, "Calais"),
-      new Terrain("2", "terrain-2", 15, "Boulogne"),
-      new Terrain("3", "terrain-3", 20, "Lille")
+      new Terrain("1", "terrain-1", 10, "Calais","../../../assets/foot.png"),
+      new Terrain("2", "terrain-2", 15, "Boulogne","../../../assets/foot.png"),
+      new Terrain("3", "terrain-3", 20, "Lille", "../../../assets/foot.png"),
+      new Terrain("4", "terrain-4", 20, "Lille", "../../../assets/foot.png"),
+      new Terrain("5", "terrain-5", 20, "Lille", "../../../assets/foot.png")
     ];
   }
 
