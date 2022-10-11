@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Terrain } from 'src/app/modules/terrain';
 import { MainService } from 'src/app/services/main.service';
 
@@ -8,12 +8,11 @@ import { MainService } from 'src/app/services/main.service';
   styleUrls: ['./cards-list.component.css']
 })
 export class CardsListComponent implements OnInit {
-  terrains: Terrain[] = [];
+  @Input() terrains: Terrain[] = [];
 
-  constructor(private mainSrv: MainService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.terrains = this.mainSrv.getTerrains();
   }
 
 }
