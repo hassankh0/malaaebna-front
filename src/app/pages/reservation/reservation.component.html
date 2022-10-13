@@ -1,39 +1,31 @@
 <body class="bg-warning">
   <div class="row justify-content-end">
-    <app-card-item class="col-3"></app-card-item>
-    <form class="col-2">
-      <div class="row ">
-        <div class="col-3">
-          <input type="text" class="form-control1" placeholder="NOM">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control2" placeholder="PRENOM">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control2" placeholder="TEL">
-        </div>
-      </div>
-    </form>
     <form class="col">
-      <div class="row ">
-        <div class="col-">
-          <input type="text" class="form-control1" placeholder="NOM">
+      <app-carditem1 class="col-3 "></app-carditem1>
+      <div class="col-7">
+        <div class="row1">
+          <input type="text" class="form-control" placeholder="NOM">
+        </div>
+        <div class="row1">
+          <input type="text" class="form-control" placeholder="PRENOM">
+        </div>
+        <div class="row1">
+          <input type="text" class="form-control" placeholder="TEL">
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control2" placeholder="Debut">
+      <div class="col-7">
+        <div class="row1 ">
+          <input type="date" class="form-control" placeholder="Date">
+        </div>
+        <div class="row1">
+          <input type="time" class="form-control" placeholder="Debut">
+        </div>
+        <div class="row1">
+          <input type="time" class="form-control" placeholder="Fin">
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control2" placeholder="Fin">
-        </div>
-      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary bt2">Cancel</button>
     </form>
     <app-ads-nav class="col-2"></app-ads-nav>
 

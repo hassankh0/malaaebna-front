@@ -13,6 +13,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { CardsListComponent } from './components/cards-list/cards-list.component';
 import { CardItemComponent } from './components/cards-list/card-item/card-item.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
+import { Carditem1Component } from './components/carditem1/carditem1.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
     SearchBarComponent,
     CardsListComponent,
     CardItemComponent,
-    ReservationComponent
+    ReservationComponent,
+    Carditem1Component
   ],
   imports: [
     BrowserModule,
