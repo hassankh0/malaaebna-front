@@ -5,10 +5,10 @@
         <div class="container">
           <div class="row">
             <div class="input-group">
-              <input type="text" aria-label="First name" class="form-control border-separator  w-50">
-              <input type="date" aria-label="Date" class="form-control border-separator">
-              <input type="time" aria-label="Time" class="form-control border-separator ">
-              <button type="button" class="btn btn-primary border-separator w-auto"><b>Search</b></button>
+              <input type="text" placeholder="Write a title" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" aria-label="Name" class="form-control border-separator  w-50">
+              <input type="date" [(ngModel)]="searchDate" [ngModelOptions]="{standalone: true}" aria-label="Date" class="form-control border-separator">
+              <input type="time" [(ngModel)]="searchTime" [ngModelOptions]="{standalone: true}" aria-label="Time" class="form-control border-separator ">
+              <button type="button" (click)="onSearch()" class="btn btn-primary border-separator w-auto"><b>Search</b></button>
             </div>
           </div>
         </div>

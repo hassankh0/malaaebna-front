@@ -12,8 +12,14 @@ import { AdsNavComponent } from './components/ads-nav/ads-nav.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CardsListComponent } from './components/cards-list/cards-list.component';
 import { CardItemComponent } from './components/cards-list/card-item/card-item.component';
+
+import { SearchReservationPipe } from './pipes/search-reservation.pipe';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { Carditem1Component } from './components/carditem1/carditem1.component';
+
 
 @NgModule({
   declarations: [
@@ -26,13 +32,16 @@ import { Carditem1Component } from './components/carditem1/carditem1.component';
     SearchBarComponent,
     CardsListComponent,
     CardItemComponent,
+    SearchReservationPipe,
     ReservationComponent,
     Carditem1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,8 +13,7 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     this.mainSrv.fetchTerrains();
     this.mainSrv.fetchReservations();
-    console.log(this.mainSrv.getTerrains());
-    console.log(this.mainSrv.getReservations());
+
   }
 
 }

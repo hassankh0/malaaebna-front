@@ -1,8 +1,8 @@
 <body class="bg-warning">
   <div class="row justify-content-end">
     <div class="col-lg-10">
-      <app-search-bar></app-search-bar>
-      <app-cards-list></app-cards-list>
+      <app-search-bar (searchEvent)=onTerrainSearched($event)></app-search-bar>
+      <app-cards-list [terrains]="terrains | searchReservation:searchText:searchDate  "></app-cards-list>
   </div>
   <app-ads-nav class="col-lg-2"></app-ads-nav>
   </div>
