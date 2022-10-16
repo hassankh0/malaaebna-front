@@ -1,14 +1,14 @@
 import { Time } from "@angular/common";
 
 export class Reservation {
-  public id: Object;
-  public terrainId: String;
+  public id: number;
+  public terrainId: number;
   public nomPers: String;
   public phone: String;
   public startTime: Date;
   public endTime: Date;
 
-  constructor(_id: String, _terrainId: String, _nomPers: String, _phone: String, _startTime: Date, _endTime: Date) {
+  constructor(_id: number, _terrainId: number, _nomPers: String, _phone: String, _startTime: Date, _endTime: Date) {
     this.id = _id;
     this.terrainId = _terrainId;
     this.nomPers = _nomPers;

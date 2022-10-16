@@ -4,28 +4,25 @@
       <app-carditem1 [terrain]="terrain" class="col-3 "></app-carditem1>
       <div class="col-7">
         <div class="row1">
-          <input type="text" class="form-control" placeholder="NOM">
+          <input type="text" class="form-control" placeholder="NOM"  [(ngModel)]="nom" [ngModelOptions]="{standalone: true}">
         </div>
         <div class="row1">
-          <input type="text" class="form-control" placeholder="PRENOM">
+          <input type="text" class="form-control" placeholder="PRENOM"  [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}">
         </div>
         <div class="row1">
-          <input type="text" class="form-control" placeholder="TEL">
+          <input type="text" class="form-control" placeholder="TEL"  [(ngModel)]="telephone" [ngModelOptions]="{standalone: true}">
         </div>
       </div>
       <div class="col-7">
-        <div class="row1 ">
-          <input type="date" class="form-control" placeholder="Date">
+        <div class="row1">
+          <input type="datetime-local" class="form-control" placeholder="Debut" [(ngModel)]="debut" [ngModelOptions]="{standalone: true}">
         </div>
         <div class="row1">
-          <input type="time" class="form-control" placeholder="Debut">
-        </div>
-        <div class="row1">
-          <input type="time" class="form-control" placeholder="Fin">
+          <input type="datetime-local" class="form-control" placeholder="Fin"  [(ngModel)]="fin" [ngModelOptions]="{standalone: true}">
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="submit" class="btn btn-primary bt2" (click)="goHome()">Cancel</button>
+      <button type="submit" class="btn btn-primary" (click)="reserve()">Submit</button>
+      <button class="btn btn-primary bt2" (click)="goHome()">Cancel</button>
     </form>
     <app-ads-nav class="col-2"></app-ads-nav>
 

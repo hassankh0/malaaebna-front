@@ -8,10 +8,14 @@
   border-width: 0.2rem;
   border-color: white;
   border-radius: 0.5rem;
+  width: 282px;
+  height: 143px;
   max-width: 282px;
   max-height: 143px;
 }
 .card-img-top{
-    max-width: 280px;
+  max-width: 280px;
   max-height: 140px;
+  width: 275px;
+  height: 135px;
 }

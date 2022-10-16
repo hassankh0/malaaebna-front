@@ -3,6 +3,7 @@ import { MainService } from 'src/app/services/main.service';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Reservation } from 'src/app/modules/reservation';
 
 @Component({
   selector: 'app-reservation',
@@ -10,15 +11,25 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./reservation.component.css']
 })
 export class ReservationComponent implements OnInit {
-  id: String;
+  id: number;
   terrain: Terrain;
-  constructor(private mainSrv: MainService, private _router: Router, private activatedRoute: ActivatedRoute) { }
+  nom:String;
+  prenom:String;
+  telephone:String;
+  debut:Date;
+  fin:Date;
 
-  ngOnInit(): void {
+
+
+  constructor(private mainSrv: MainService, private _router: Router, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.paramMap.subscribe(params => {
-      this.id = params.get("id")
+      this.id = parseInt(params.get("id"));
     });
     this.terrain = this.mainSrv.getTerrainById(this.id);
+  }
+
+  ngOnInit(): void {
+
   }
 
   goHome() {
@@ -26,7 +37,8 @@ export class ReservationComponent implements OnInit {
   }
 
   reserve() {
-    console.log("reserved");
+    this.mainSrv.makeReservation(new Reservation(0, this.terrain.id, `${this.nom} ${this.prenom}`, this.telephone,this.debut, this.fin),this.terrain);
+    this.goHome();
   }
 
 }

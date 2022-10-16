@@ -11,6 +11,7 @@ export class Carditem1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.terrain)
   }
 
 }
