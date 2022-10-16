@@ -68,4 +68,12 @@ export class MainService {
   public getReservations(): Reservation[] {
     return this.reservations;
   }
+  public getTerrainById(id:String): Terrain{
+    this.terrains.forEach(element => {
+      if (element.id == id) {
+        return element;
+      }
+    });
+    return undefined;
+  }
 }
