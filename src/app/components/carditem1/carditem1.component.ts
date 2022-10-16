@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Terrain } from 'src/app/modules/terrain';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-carditem1',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carditem1.component.css']
 })
 export class Carditem1Component implements OnInit {
-
+  @Input() terrain:Terrain;
   constructor() { }
 
   ngOnInit(): void {
