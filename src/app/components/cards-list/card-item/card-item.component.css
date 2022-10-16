@@ -8,4 +8,10 @@
   border-width: 0.2rem;
   border-color: white;
   border-radius: 0.5rem;
+  max-width: 282px;
+  max-height: 143px;
+}
+.card-img-top{
+    max-width: 280px;
+  max-height: 140px;
 }
