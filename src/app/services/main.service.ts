@@ -22,7 +22,7 @@ export class MainService {
     //   new Terrain(4, "terrain-4", 20, "Lille", "../../../assets/foot.png"),
     //   new Terrain(5, "terrain-5", 20, "Lille", "../../../assets/foot.png")
     // ];
-
+    this.terrains = [];
     this.http.get(`http://127.0.0.1:5000/terrains`)
       .subscribe((data: any) => {
         data.data.map((d: any) => {
@@ -38,6 +38,7 @@ export class MainService {
     //   new Reservation(1, 1, "hassan", "0613172014", new Date('2022-10-12T14:00:00'), new Date('2022-10-12T15:00:00')),
     //   new Reservation(2, 2, "atwe", "0613172014", new Date('2022-10-12T14:00:00'), new Date('2022-10-12T15:00:00'))
     // ];
+    this.reservations = [];
     this.http.get('http://127.0.0.1:5000/resevations')
       .subscribe((data: any) => {
         data.data.map((d: any) => {
