@@ -16,17 +16,18 @@ export class MainService {
 
   public fetchTerrains() {
     // this.terrains = [
-    //   new Terrain(1, "terrain-1", 10, "Calais","../../../assets/foot.png"),
-    //   new Terrain(2, "terrain-2", 15, "Boulogne","../../../assets/foot.png"),
-    //   new Terrain(3, "terrain-3", 20, "Lille", "../../../assets/foot.png"),
-    //   new Terrain(4, "terrain-4", 20, "Lille", "../../../assets/foot.png"),
-    //   new Terrain(5, "terrain-5", 20, "Lille", "../../../assets/foot.png")
+    //   new Terrain(1, "terrain-1", 10, "Calais","../../../assets/foot.png","football"),
+    //   new Terrain(2, "terrain-2", 15, "Boulogne", "../../../assets/foot.png", "football"),
+    //   new Terrain(3, "terrain-3", 20, "Lille", "../../../assets/foot.png", "futsale"),
+    //   new Terrain(4, "terrain-4", 20, "Lille", "../../../assets/foot.png", "basketball"),
+    //   new Terrain(5, "terrain-5", 20, "Lille", "../../../assets/foot.png", "football")
     // ];
+    // return;
     this.terrains = [];
     this.http.get(`http://127.0.0.1:5000/terrains`)
       .subscribe((data: any) => {
         data.data.map((d: any) => {
-          let terrain: Terrain = new Terrain(d.id, d.name, d.Tarif, d.Adress, d.image);
+          let terrain: Terrain = new Terrain(d.id, d.name, d.Tarif, d.Adress, d.image, d.type);
           this.terrains.push(terrain);
         });
       });
@@ -38,6 +39,7 @@ export class MainService {
     //   new Reservation(1, 1, "hassan", "0613172014", new Date('2022-10-12T14:00:00'), new Date('2022-10-12T15:00:00')),
     //   new Reservation(2, 2, "atwe", "0613172014", new Date('2022-10-12T14:00:00'), new Date('2022-10-12T15:00:00'))
     // ];
+    // return;
     this.reservations = [];
     this.http.get('http://127.0.0.1:5000/resevations')
       .subscribe((data: any) => {

@@ -28,7 +28,7 @@ export class SearchReservationPipe implements PipeTransform {
     if (isNaN(searchdate.getTime())) {
       return list.filter(item => {
         if (item.nom) {
-          return item.nom.toLocaleLowerCase().includes(searchText.toLowerCase());
+          return item.nom.toLocaleLowerCase().includes(searchText.toLowerCase()) || item.type.toLocaleLowerCase().includes(searchText.toLowerCase()) ;
         }
       });
     }
